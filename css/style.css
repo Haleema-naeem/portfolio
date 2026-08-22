@@ -1239,7 +1239,7 @@ button:focus-visible {
 
     .nav-links a {
     font-size: 1.1rem;
-    text-align: right;
+    text-align: left;
   }
 
   .nav-toggle {
