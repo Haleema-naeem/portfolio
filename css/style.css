@@ -1199,6 +1199,11 @@ button:focus-visible {
   }
 }
 
+html.is-mobile-device .nav-links,
+html.is-mobile-device .nav-toggle {
+  display: none !important;
+}
+
 @media (max-width: 760px) {
   section {
     padding: 76px 0;
