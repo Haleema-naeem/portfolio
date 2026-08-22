@@ -1199,19 +1199,43 @@ button:focus-visible {
   }
 }
 
-html.is-mobile-device .nav-links,
-html.is-mobile-device .nav-toggle {
-  display: none !important;
-}
+/* Mobile nav visibility is controlled inside the 760px media query below,
+   which turns .nav-links into a full-screen opaque slide-in panel. */
 
 @media (max-width: 760px) {
   section {
     padding: 76px 0;
   }
 
-  .nav-links,
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: var(--bg-deep);
+    opacity: 1;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 40px 24px;
+    gap: 28px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+
   .nav-toggle {
-    display: none !important;
+    display: flex;
   }
 
   .hero {
