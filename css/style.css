@@ -223,6 +223,8 @@ h1, h2, h3, h4 {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
   gap: 34px;
   align-items: center;
 }
@@ -1202,41 +1204,9 @@ button:focus-visible {
     padding: 76px 0;
   }
 
-  .nav-links {
-    display: none;
-    position: fixed;
-    top: 76px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--bg-deep);
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 40px 24px;
-    gap: 28px;
-    z-index: 500;
-    overflow-y: auto;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  body.nav-open {
-    overflow: hidden;
-  }
-
-  .nav-links a {
-    font-size: 1.1rem;
-  }
-
+  .nav-links,
   .nav-toggle {
-    display: flex;
-  }
-
-  .nav-cta .btn-ghost {
-    display: none;
+    display: none !important;
   }
 
   .hero {
