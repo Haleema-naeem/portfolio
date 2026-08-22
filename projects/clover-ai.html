@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Clover AI — Haleema Naeem</title>
+<meta name="description" content="Clover AI — a document-based RAG assistant built with Python, Streamlit, Supabase, ChromaDB, Groq, and Llama 3.2." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="../index.html#top" class="logo"><span class="dot"></span>Haleema</a>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">about</a></li>
+      <li><a href="../index.html#skills">skills</a></li>
+      <li><a href="../index.html#projects">projects</a></li>
+      <li><a href="../index.html#writing">writing</a></li>
+      <li><a href="../index.html#education">education</a></li>
+      <li><a href="../index.html#contact">contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="btn btn-ghost btn-sm" href="../assets/Haleema_Naeem_CV.pdf" download>Resume</a>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<header class="project-hero">
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="../index.html#projects">← all projects</a> <span>/ clover-ai</span>
+    </div>
+
+    <div class="project-hero-top">
+      <div>
+        <h1>Clover AI</h1>
+        <p class="project-tagline">A document-based AI assistant built with Retrieval-Augmented Generation — upload a document, ask it anything, and get answers grounded in the actual content.</p>
+      </div>
+      <div class="project-hero-actions">
+        <a href="https://cloverai.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary">Try the live demo ↗</a>
+        <a href="https://github.com/Haleema-naeem" target="_blank" rel="noopener" class="btn btn-ghost">GitHub profile</a>
+      </div>
+    </div>
+
+    <div class="project-hero-img reveal">
+      <img src="../assets/images/cloverai.jpg" alt="Clover AI document assistant chat interface" />
+    </div>
+  </div>
+</header>
+
+<div class="project-body">
+  <div class="wrap project-body-grid">
+    <div>
+      <div class="project-section reveal">
+        <h2>Overview</h2>
+        <p>
+          Clover AI is a document-based AI assistant that lets users upload their own files and ask questions
+          based on what's actually inside them. Instead of guessing from general knowledge, it retrieves the
+          most relevant pieces of the document first, then generates an answer grounded in that content — the
+          core idea behind Retrieval-Augmented Generation (RAG).
+        </p>
+        <p>
+          The interface is built for simplicity: drop in a document, ask a question in plain English, and get
+          a response that's traceable back to the source material rather than a hallucinated guess.
+        </p>
+      </div>
+
+      <div class="project-section reveal">
+        <h2>How it works</h2>
+        <ul class="feature-list">
+          <li>User uploads a document through the Streamlit interface.</li>
+          <li>The document is chunked and converted into vector embeddings using BGE embeddings.</li>
+          <li>Embeddings are stored and indexed in ChromaDB for fast similarity search.</li>
+          <li>On a question, the most relevant chunks are retrieved from the vector store.</li>
+          <li>Those chunks are passed to Llama 3.2 via the Groq API to generate a grounded answer.</li>
+          <li>Supabase handles backend data persistence behind the scenes.</li>
+        </ul>
+      </div>
+
+      <div class="project-section reveal">
+        <h2>What I built</h2>
+        <p>
+          I developed the backend retrieval pipeline, the document processing and chunking logic, the
+          connection to the Groq API for generation, and the user-facing Streamlit interface — tying all of
+          it together into a single working assistant a person can actually upload a file to and chat with.
+        </p>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-card reveal">
+        <h4>Tech stack</h4>
+        <div class="project-stack">
+          <span>Python</span>
+          <span>Streamlit</span>
+          <span>Supabase</span>
+          <span>ChromaDB</span>
+          <span>Groq API</span>
+          <span>BGE Embeddings</span>
+          <span>Llama 3.2</span>
+        </div>
+      </div>
+      <div class="side-card reveal">
+        <h4>Links</h4>
+        <div class="project-links" style="flex-direction:column; align-items:stretch;">
+          <a href="https://cloverai.streamlit.app/" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live demo ↗</a>
+          <a href="https://github.com/Haleema-naeem" target="_blank" rel="noopener" class="btn btn-ghost btn-sm">GitHub profile ↗</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <div class="wrap other-projects">
+    <h3>More projects</h3>
+    <div class="other-grid">
+      <a href="wandering-bloom.html" class="other-card">
+        <div class="other-thumb"><img src="../assets/images/wandering-bloom.jpg" alt="Wandering Bloom flower shop website" /></div>
+        <p>The Wandering Bloom</p>
+      </a>
+      <a href="tumblepop.html" class="other-card">
+        <div class="other-thumb"><img src="../assets/images/tumblepop.jpg" alt="Tumblepop game characters" /></div>
+        <p>Tumblepop</p>
+      </a>
+      <a href="coding-contest.html" class="other-card">
+        <div class="other-thumb"><img src="../assets/images/coding-contest.jpg" alt="Coding Contest platform" /></div>
+        <p>Coding Contest</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 Haleema Naeem. Built with intent, one commit at a time.</p>
+    <div class="footer-socials">
+      <a href="https://github.com/Haleema-naeem" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:haleema090107@gmail.com">Email</a>
+      <a href="#">LinkedIn</a>
+      <a href="../assets/Haleema_Naeem_CV.pdf" download>Resume</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
