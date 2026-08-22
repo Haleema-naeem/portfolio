@@ -1225,7 +1225,7 @@ button:focus-visible {
     border-left: 1px solid var(--line);
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: 40px 24px;
     gap: 28px;
     overflow-y: auto;
