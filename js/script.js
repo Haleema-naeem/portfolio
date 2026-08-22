@@ -21,6 +21,7 @@ function initNavToggle() {
     const isOpen = links.classList.toggle("open");
     toggle.classList.toggle("open", isOpen);
     toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    document.body.classList.toggle("nav-open", isOpen);
   });
 
   links.querySelectorAll("a").forEach((link) => {
@@ -28,6 +29,7 @@ function initNavToggle() {
       links.classList.remove("open");
       toggle.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
     });
   });
 }
