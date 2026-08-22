@@ -1225,6 +1225,7 @@ button:focus-visible {
     border-left: 1px solid var(--line);
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-end;
     padding: 40px 24px;
     gap: 28px;
     overflow-y: auto;
@@ -1236,8 +1237,9 @@ button:focus-visible {
     transform: translateX(0);
   }
 
-  .nav-links a {
+    .nav-links a {
     font-size: 1.1rem;
+    text-align: right;
   }
 
   .nav-toggle {
