@@ -1210,17 +1210,19 @@ button:focus-visible {
   .nav-links {
     position: fixed;
     top: 76px;
-    left: 0;
     right: 0;
     bottom: 0;
     height: calc(100vh - 76px);
     height: calc(100dvh - 76px);
-    width: 100%;
+    width: 65%;
+    max-width: 320px;
     z-index: 99;
     background-color: var(--bg-deep);
     opacity: 1;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
+    box-shadow: -8px 0 24px -8px rgba(0, 0, 0, 0.4);
+    border-left: 1px solid var(--line);
     flex-direction: column;
     justify-content: flex-start;
     padding: 40px 24px;
